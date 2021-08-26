@@ -1,6 +1,5 @@
 {% extends "ads/base_menu.html" %}
 {% block content %}
-<h1>Ads</h1>
 
 <div style="float:right">
 <!-- https://www.w3schools.com/howto/howto_css_search_button.asp -->
@@ -12,7 +11,7 @@
 <a href="{% url 'ads:all' %}"><i class="fa fa-undo"></i></a>
 </form>
 </div>
-
+<h1>Blogs</h1>
 <p>
 {% if ad_list %}
 <ul>
@@ -24,7 +23,7 @@
         (<a href="{% url 'ads:ad_update' ad.id %}">Edit</a> |
         <a href="{% url 'ads:ad_delete' ad.id %}">Delete</a>)
         {% endif %}
-    </li>
+
 
     {% if user.is_authenticated %}
         <!-- Two hrefs with two stacked icons each - one showing and one hidden -->
@@ -48,18 +47,18 @@
         </span>
         </a>
         {% endif %}
-
+</li>
 
   {% endfor %}
 
 
 </ul>
 {% else %}
-  <p>There are no ads in the database.</p>
+  <p>There are no Blogs in the database.</p>
 {% endif %}
 </p>
 <p>
-<a href="{% url 'ads:ad_create' %}">Add an Ad</a> |
+<a href="{% url 'ads:ad_create' %}">Write a blog</a> |
 {% if user.is_authenticated %}
 <a href="{% url 'logout' %}?next={% url 'ads:all' %}">Logout</a>
 {% else %}
