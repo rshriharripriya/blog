@@ -18,7 +18,7 @@ from django.db.models import Q
 
 class AdListView(OwnerListView):
     model = Ad
-    template_name = "ads/index.html"
+    template_name = "ads/ad_list.html"
 
     def get(self, request):
         strval = request.GET.get("search", False)
