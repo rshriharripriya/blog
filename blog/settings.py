@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 # import django
 # django.setup()
-
+import django_heroku
+django_heroku.settings(locals())
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -21,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'zi%4ng78ipjsd*q!l3@s8u!b844p&b$bi&1l12q+gg=g6guk%x'
+# SECRET_KEY = 'zi%4ng78ipjsd*q!l3@s8u!b844p&b$bi&1l12q+gg=g6guk%x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
